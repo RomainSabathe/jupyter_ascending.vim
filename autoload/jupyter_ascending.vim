@@ -1,7 +1,7 @@
 function! s:on_stdout(j, d, e)
-  if len(a:d) > 0 && len(a:d[0]) > 0
-    echom '[JupyterAscending]' a:d
-  endif
+  "if len(a:d) > 0 && len(a:d[0]) > 0
+  "  echom '[JupyterAscending]' a:d
+  "endif
 endfunction
 
 function! s:execute(command_string) abort
