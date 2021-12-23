@@ -15,6 +15,8 @@ nnoremap <Plug>JupyterExecute    :call jupyter_ascending#execute()<CR>
 nnoremap <Plug>JupyterExecuteAll :call jupyter_ascending#execute_all()<CR>
 
 if get(g:, 'jupyter_ascending_default_mappings', v:true)
-  nmap <space><space>x <Plug>JupyterExecute
+  "nmap <space><space>x <Plug>JupyterExecute
+  " Dirty hack to ensure that the currently highlighted cell is executed.
+  nmap <space><space>x ?# %%<CR>kk:call jupyter_ascending#execute()<CR><C-o>
   nmap <space><space>X <Plug>JupyterExecuteAll
 endif
